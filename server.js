@@ -142,6 +142,8 @@
 // });
 
 
+
+
 // const express = require("express");
 // const app = express();
 // const port = 5000;
@@ -163,40 +165,68 @@
 //   });
 // });
 
+
 // // Start server
 // app.listen(port, () => {
 //   console.log(`Server running at http://localhost:${port}`);
 // });
 
 
-// GET Request with Query Params and URL Params
-const express = require("express");
-const app = express();
-const port = 5000;
-// Simple GET
-app.get("/info", (req, res) => {
-  res.send("Server is running.");
+
+// // GET Request with Query Params and URL Params
+// const express = require("express");
+// const app = express();
+// const port = 5000;
+
+// // Simple GET
+// app.get("/info", (req, res) => {
+//   res.send("Server is running.");
+// });
+
+// // GET with Query Params
+// app.get("/user", (req, res) => {
+//   const { name, age } = req.query;
+
+//   res.send(
+//     `Query Received\nName: ${name}\nAge: ${age}`
+//   );
+// });
+
+// // GET with URL Params
+// app.get("/product/:id", (req, res) => {
+//   const productId = req.params.id;
+
+//   res.send(
+//     `Product ID Received: ${productId}`
+//   );
+// });
+
+// // Start server
+// app.listen(port, () => {
+//   console.log(`Server running at http://localhost:${port}`);
+// });
+
+
+
+
+// Advanced routing in ExpressJS
+
+// Advanced routing means creating cleaner, modular,and more flexible rouites using route
+// Parameters, query params,and express.Router(),
+
+const express=require("express");
+const app =express();
+
+// parse JSon (not needed for this route but good pratrice)
+app.use(express.json());
+
+//Route parameter example
+app.get("/user/:id", (req, res)=>{
+  const userId = req.params.id;
+  res.send(`user ID requested :${userId}`);
 });
 
-// GET with Query Params
-app.get("/user", (req, res) => {
-  const { name, age } = req.query;
-
-  res.send(
-    `Query Received\nName: ${name}\nAge: ${age}`
-  );
-});
-
-// GET with URL Params
-app.get("/product/:id", (req, res) => {
-  const productId = req.params.id;
-
-  res.send(
-    `Product ID Received: ${productId}`
-  );
-});
-
-// Start server
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+//start server
+app.listen(5000,()=>{
+  console.log("server running on http://localhost:5000");
 });
