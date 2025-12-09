@@ -173,7 +173,8 @@
 
 
 
-// // GET Request with Query Params and URL Params
+
+// GET Request with Query Params and URL Params
 // const express = require("express");
 // const app = express();
 // const port = 5000;
@@ -214,19 +215,42 @@
 // Advanced routing means creating cleaner, modular,and more flexible rouites using route
 // Parameters, query params,and express.Router(),
 
-const express=require("express");
-const app =express();
+// const express=require("express");
+// const app =express();
 
-// parse JSon (not needed for this route but good pratrice)
-app.use(express.json());
+// // parse JSon (not needed for this route but good pratrice)
+// app.use(express.json());
 
-//Route parameter example
-app.get("/user/:id", (req, res)=>{
-  const userId = req.params.id;
-  res.send(`user ID requested :${userId}`);
-});
+// //Route parameter example
+// app.get("/user/:id", (req, res)=>{
+//   const userId = req.params.id;
+//   res.send(`user ID requested :${userId}`);
+// });
 
-//start server
-app.listen(5000,()=>{
-  console.log("server running on http://localhost:5000");
-});
+// //start server
+// app.listen(5000,()=>{
+//   console.log("server running on http://localhost:5000");
+// });
+
+
+
+//Middlewaer in expressJs
+//middlewaer = a function that runs between request and response.
+//used for: logging, authentication.validation,parsing,errors,etc.
+
+//Typesd of middleware:
+//1. Appliaction level middleware
+//2. Custom middleware
+//3. Route-level & App-level middleware
+//4. Error-handling middleware
+
+
+
+
+//  moss
+// brocode
+// 
+
+
+
+
