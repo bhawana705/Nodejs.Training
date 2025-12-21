@@ -16,4 +16,5 @@
 
 
 // DOM =  html , head, titlr , body , div , p, h1 ,ul, 
-// 
+
+// get , push, , post, update, delete
