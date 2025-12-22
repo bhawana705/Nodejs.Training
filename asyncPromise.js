@@ -58,3 +58,16 @@ fs.unlink(filePath).then(
     (error)=>{console.log(error);}
 )
 
+// reading files (promises)
+const fs =require ("fs/promises");
+const path =require ("path");
+
+// const fileName="promise.txt";
+// const filePath = path.join(__dirname,fileName);
+
+const path1=__dirname;
+fs.readdir(path1).then(
+    (data)=>{console.Console.log(data);}
+).catch(
+    (error)=>{console.log(error);}
+)
